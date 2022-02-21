@@ -21,6 +21,27 @@
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{mPurple}{rgb}{0.58,0,0.82}
+\definecolor{mGreen}{rgb}{0,0.6,0}
+\definecolor{red}{rgb}{1,0,0}
+
+\lstdefinestyle{HaskellStyle}{
+  frame=tb,
+  language=haskell,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
 
 \lstset{frame=tb,
   language=haskell,
@@ -99,6 +120,31 @@ Exercise 2.3.4: a) The set of strings over alphabet $\{0,1,..., 9\}$ such that t
 Exercise 2.5.3: a) The set of strings consisting of zero or more a's followed by zero or more $b$'s, followed by zero or $c$'s. b) The set of strings that consist of either $01$ repeated one or more times or $010$ repeated one or more times. c) The set of strings of $0$'s and $1$'s such that at least one of the last ten positions is a $1$.
 
 \includegraphics[width=0.75\textwidth]{Images/2.5.3.png}
+
+
+\subsection{Week 3}
+
+\includegraphics[width=0.65\textwidth]{Images/2.3.1and2.3.2_chart.png}
+
+\noindent
+The following DFAs above can be drawn as:
+
+\includegraphics[width=0.50\textwidth]{Images/2.3.1and2.3.2.png}
+
+\medskip\noindent
+In order to convert a dfa to an nfa, there can be only one final state. The initial state can remain the same, but the automata must result in one final state every time. Therefore, "final" should not return a set but instead a state.
+
+\medskip\noindent
+NOTE: This does not work yet.
+
+\begin{lstlisting}[style=HaskellStyle]
+  dfa_initial = nfa_initial nfa,
+  dfa_final = let final qs = True in final,
+  dfa_delta = let final in
+        final [] c = return c
+        final (q:qs) c = qs
+        in f }
+  \end{lstlisting}
 
 
 \section{Project}
