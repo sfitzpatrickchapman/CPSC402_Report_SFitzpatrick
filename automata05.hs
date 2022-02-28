@@ -8,9 +8,9 @@ data DFA s = DFA {
   dfa_delta :: s -> Char -> s }
 
 data NFA s = NFA {
-  nfa_initial :: s,    
-  nfa_final :: s -> Bool,  
-  nfa_delta :: s -> Char -> [s] }    
+  nfa_initial :: s,
+  nfa_final :: s -> Bool,
+  nfa_delta :: s -> Char -> [s] }
 
 -- an NFA for all words that have at least two 'a' and end on 'a'
 data Automaton1 = Q0 | Q1 | Q2
@@ -64,20 +64,16 @@ dfa_recognize dfa word = dfa_semantics dfa (dfa_initial dfa) word
 nfa_recognize :: NFA s -> [Char] -> Bool
 nfa_recognize nfa word = nfa_semantics nfa (nfa_initial nfa) word
 
--- convert an NFA to a DFA
+- convert an NFA to a DFA
 nfa2dfa :: NFA s -> DFA [s]
 nfa2dfa nfa = DFA {
-  -- exercise: correct the next three definitions
-  dfa_initial = nfa_initial nfa,
-  dfa_final = let final qs = True in final,
-  dfa_delta = let final in
-        final [] c = return c
-        final (q:qs) c = qs
-        in f }
-       
-  -- dfa_initial = [],
-  -- dfa_final = let final qs = True in final,
-  -- dfa_delta = let delta qs c = qs in delta }
+-- exercise: correct the next three definitions
+dfa_initial = [nfa_initial nfa],
+dfa_final = let final qs = disjunction (map(nfa_final nfa) qs) in final,
+dfa_delta = let
+  f [] c = []
+  f (q:qs) c = concat [nfa_delta nfa q c, f qs c] in f
+}
 
 -- for testing
 -- from https://stackoverflow.com/a/16108856/4600290
