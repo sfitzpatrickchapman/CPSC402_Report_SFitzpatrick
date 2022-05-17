@@ -132,7 +132,11 @@ c) The set of strings with 011 as a substring
 \noindent
 Exercise 2.3.4: a) The set of strings over alphabet $\{0,1,..., 9\}$ such that the final digit has appeared before. b) The set of strings over alphabet $\{0,1,...,9\}$ such that the final digit has not appeared before. c) The set of strings of $0$'s and $1$'s such that there are two $0$'s separated by a number of positions that is a number of $4$. Note that $0$ is an allowable multiple of $4$.
 
-\includegraphics[width=0.55\textwidth]{Images/2.3.4.png}
+\includegraphics[width=0.55\textwidth]{Images/2.3.4a.png}
+
+\includegraphics[width=0.55\textwidth]{Images/2.3.4b.png}
+
+\includegraphics[width=0.55\textwidth]{Images/2.3.4c.png}
 
 \medskip\noindent
 Exercise 2.5.3: a) The set of strings consisting of zero or more a's followed by zero or more $b$'s, followed by zero or $c$'s. b) The set of strings that consist of either $01$ repeated one or more times or $010$ repeated one or more times. c) The set of strings of $0$'s and $1$'s such that at least one of the last ten positions is a $1$.
@@ -147,7 +151,9 @@ Exercise 2.5.3: a) The set of strings consisting of zero or more a's followed by
 \noindent
 The following DFAs above can be drawn as:
 
-\includegraphics[width=0.50\textwidth]{Images/2.3.1and2.3.2.png}
+\includegraphics[width=0.50\textwidth]{Images/2.3.1.png}
+
+\includegraphics[width=0.50\textwidth]{Images/2.3.2.png}
 
 \medskip\noindent
 In order to convert a dfa to an nfa, there can be only one final state. The initial state can remain the same, but the automata must result in one final state every time. Therefore, "final" should not return a set but instead a state.
@@ -204,6 +210,18 @@ Here are the BNFC tokens for the same C$--$ code and the respective abstract syn
 \section{Project}
 \medskip\noindent
 This portion of the report will explain how the gcc compiler for  the imperative programming langauge, C, works. Some example programs will be compiled and explained in detail. The target langauge will be assembly.
+
+\medskip\noindent
+Plan:
+1. Create diagram of easy_mult.cc -> a.wat -> assembly
+2. Talk about easy_mult.cc -> a.wat
+    -Talk about AST
+    -Explain what the pieces of code turn into (tokens)
+    -More detailed diagram
+3. Talk about a.wat -> assembly
+    -Provide an assembly key
+    -Another detailed diagram
+4. Repeat for 2 more programs while decreasing in repetitiveness
 
 \section{Conclusions}\label{conclusions}
 
