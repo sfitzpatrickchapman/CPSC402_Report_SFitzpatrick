@@ -1,8 +1,12 @@
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
 \contentsline {section}{\numberline {2}Homework}{1}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Week 1}{1}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Week 2}{1}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Week 3}{3}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Week 4}{4}{subsection.2.4}%
-\contentsline {section}{\numberline {3}Project}{5}{section.3}%
-\contentsline {section}{\numberline {4}Conclusions}{5}{section.4}%
+\contentsline {subsection}{\numberline {2.2}Week 2}{2}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Week 3}{4}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Week 4}{5}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Project}{6}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Introduction}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}easy\_mult.cc}{7}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}easy\_mult\_var.cc}{9}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}find\_avg.cc}{11}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Conclusion}{15}{section.4}%
